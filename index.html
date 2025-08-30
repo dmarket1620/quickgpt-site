@@ -29,6 +29,29 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "t2wl8vdgli");
 </script>
+  <script>function uet_report_conversion() {window.uetq = window.uetq || [];window.uetq.push('event', 'SignupClick', {});}</script>
+  <script>
+document.addEventListener('click', function (e) {
+    const el = e.target.closest('a,button');
+    if (!el) return;
+
+    const href = (el.getAttribute('href') || '').trim().toLowerCase();
+    const text = (el.textContent || '').trim().toLowerCase();
+
+    // Match outbound links OR common CTA texts
+    const outboundMatch =
+        /customgpt\.ai/.test(href) ||
+        /fpr=|affid=|ref=|affiliate/.test(href);
+    const ctaTextMatch =
+        /start free|try customgpt|get started|free trial/i.test(text);
+
+    if (outboundMatch || ctaTextMatch) {
+        console.log("Microsoft Ads Conversion Fired: SignupClick ✅");
+        uet_report_conversion();
+    }
+});
+</script>
+
 </head>
 <body>
   <nav>
